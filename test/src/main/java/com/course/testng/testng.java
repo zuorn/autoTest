@@ -1,8 +1,6 @@
 package com.course.testng;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class testng {
     @Test
@@ -17,7 +15,24 @@ public class testng {
     }
 
     @AfterMethod
-    public void aftermethod(){
+    public void AfterMethod(){
         System.out.println("AfterMethod这是在测试方法之后运行的");
+    }
+
+    @Test
+    public void testcase2(){
+        System.out.println("这是测试用例2");
+    }
+
+
+    @BeforeClass
+    public void BeforeClass(){
+        System.out.println("这是在类运行之前的方法");
+
+    }
+
+    @AfterClass
+    public void AfterClass(){
+        System.out.println("这是在类运行之后运行的方法");
     }
 }
